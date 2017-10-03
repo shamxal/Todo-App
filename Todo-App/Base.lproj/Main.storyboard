@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -125,8 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-E3-fRJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="579"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" text="Type..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-E3-fRJ">
+                                <rect key="frame" x="16" y="20" width="359" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -157,7 +158,7 @@
                             <constraint firstItem="NEI-E3-fRJ" firstAttribute="top" secondItem="o4A-LX-pCL" secondAttribute="top" id="Xzh-3g-oou"/>
                             <constraint firstItem="NEI-E3-fRJ" firstAttribute="trailing" secondItem="o4A-LX-pCL" secondAttribute="trailing" id="Y4S-nH-gpb"/>
                             <constraint firstItem="wGs-gA-DjG" firstAttribute="top" secondItem="NEI-E3-fRJ" secondAttribute="bottom" constant="8" id="xhk-ZT-rZH"/>
-                            <constraint firstItem="NEI-E3-fRJ" firstAttribute="leading" secondItem="o4A-LX-pCL" secondAttribute="leading" id="ywq-sa-1yg"/>
+                            <constraint firstItem="NEI-E3-fRJ" firstAttribute="leading" secondItem="o4A-LX-pCL" secondAttribute="leading" constant="16" id="ywq-sa-1yg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o4A-LX-pCL"/>
                     </view>

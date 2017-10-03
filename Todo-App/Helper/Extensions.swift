@@ -10,6 +10,8 @@ import UIKit
 import RealmSwift
 
 extension HomeVC {
+    
+    //filter list with name and created date by using action sheet
     func showActionSheet() {
         
         let actionSheet: UIAlertController = UIAlertController(title: "Sort by", message: "", preferredStyle: .actionSheet)
@@ -28,6 +30,7 @@ extension HomeVC {
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    //get all datas from sorting by given key
     func reloadDb(keyPath: String) {
         let realmObj = try! Realm()
         arrResult = realmObj.objects(Todo.self).sorted(byKeyPath: keyPath)

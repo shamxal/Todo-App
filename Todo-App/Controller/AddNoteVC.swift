@@ -31,10 +31,20 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        
+        textView.text = ""
+        textView.alpha = 1
+        return true
+    }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         if text == "\n" {
             textView.resignFirstResponder()
+            if textView.text.characters.count == 0 {
+                textView.text = "Type..."
+                textView.alpha = 0.55
+            }
         }
         return true
     }
@@ -47,7 +57,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
     
     @IBAction func btnSave(_ sender: Any) {
         
-        if txtViewNote.text.characters.count > 0 {
+        if txtViewNote.text.characters.count > 0 && txtViewNote.text != "Type..."{
             
             if isNew {
                 let todo = Todo()
