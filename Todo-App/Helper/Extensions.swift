@@ -62,10 +62,12 @@ extension UIViewController {
         return formatter.string(from: date)
     }
     
-    func noteAddedAlert(message: String) {
+    func noteAddedAlert(message: String, handler:(()->Swift.Void)? = nil) {
         
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (action) in
+            handler!()
+        }))
         self.present(alert, animated: true, completion: nil)
     }
 }

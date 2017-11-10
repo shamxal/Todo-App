@@ -67,7 +67,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
                 
                 try! realm.write {
                     realm.add(todo)
-                    noteAddedAlert(message: "Your note added")
+                    noteAddedAlert(message: "Your note added", handler: nil)
                 }
             } else {
                 let todo = Todo()
@@ -77,7 +77,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
                 
                 try! realm.write {
                     realm.add(todo, update: true)
-                    noteAddedAlert(message: "Your note updated")
+                    noteAddedAlert(message: "Your note updated", handler: nil)
                 }
             }
         }
